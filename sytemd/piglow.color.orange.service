@@ -1,0 +1,11 @@
+[Unit]
+Description=PiGlow Enabling Orange Lights
+Requires=sshd.service
+After=sshd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/piglow_color orange 50
+
+[Install]
+RequiredBy=sshd.service

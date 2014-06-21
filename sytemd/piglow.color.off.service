@@ -1,0 +1,13 @@
+[Unit]
+Description=PiGlow Kill All Lights
+DefaultDependencies=no
+Before=shutdown.target
+Before=reboot.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/piglow_off
+
+[Install]
+WantedBy=shutdown.target
+WantedBy=reboot.target

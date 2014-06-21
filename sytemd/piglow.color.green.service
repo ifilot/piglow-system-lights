@@ -1,0 +1,11 @@
+[Unit]
+Description=PiGlow Enabling Green Lights
+Requires=httpd.service
+After=httpd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/piglow_color green 10
+
+[Install]
+RequiredBy=httpd.service

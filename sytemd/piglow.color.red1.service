@@ -1,0 +1,11 @@
+[Unit]
+Description=PiGlow Enabling Red1 Lights
+Requires=netctl@wlan0\x2dKippenhok.service
+After=netctl@wlan0\x2dKippenhok.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/piglow_color red1 25
+
+[Install]
+RequiredBy=netctl@wlan0\x2dKippenhok.service

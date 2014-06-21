@@ -1,0 +1,11 @@
+[Unit]
+Description=PiGlow Enabling Red1 Lights
+Requires=local-fs.target
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/piglow_color red0 25
+
+[Install]
+RequiredBy=local-fs.target
